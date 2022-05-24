@@ -1,4 +1,9 @@
-A website where users can learn about  faeries as they appear in Celtic folklore, and interact with them in a fae themed choose-your-own-adventure game.
+A website where users can learn about faeries and create their own.
 
-Wireframe
-Images/Screen Shot 2022-05-23 at 2.52.27 PM.png
+**Wireframe**
+faerie-path-react-front/Images/fae-wireframe.png
+
+**Github Link**
+https://github.com/rebeccafoltin/faerie-path-react-front
+
+**Deployed Link**
