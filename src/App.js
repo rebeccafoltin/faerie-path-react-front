@@ -11,6 +11,8 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 
+import CreateFaerie from './components/Faeries/CreateFaerie'
+
 class App extends Component {
   constructor (props) {
     super(props)
