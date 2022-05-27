@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/faerie-path-react-front/static/css/main.9610e4a1.chunk.css",
+    "main.js": "/faerie-path-react-front/static/js/main.415363b7.chunk.js",
+    "main.js.map": "/faerie-path-react-front/static/js/main.415363b7.chunk.js.map",
+    "runtime-main.js": "/faerie-path-react-front/static/js/runtime-main.b6a27349.js",
+    "runtime-main.js.map": "/faerie-path-react-front/static/js/runtime-main.b6a27349.js.map",
+    "static/js/2.5d91987c.chunk.js": "/faerie-path-react-front/static/js/2.5d91987c.chunk.js",
+    "static/js/2.5d91987c.chunk.js.map": "/faerie-path-react-front/static/js/2.5d91987c.chunk.js.map",
+    "index.html": "/faerie-path-react-front/index.html",
+    "static/css/main.9610e4a1.chunk.css.map": "/faerie-path-react-front/static/css/main.9610e4a1.chunk.css.map",
+    "static/js/2.5d91987c.chunk.js.LICENSE.txt": "/faerie-path-react-front/static/js/2.5d91987c.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/faerie-path-react-front/static/media/sprite.1dfce588.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b6a27349.js",
+    "static/js/2.5d91987c.chunk.js",
+    "static/css/main.9610e4a1.chunk.css",
+    "static/js/main.415363b7.chunk.js"
+  ]
+}
