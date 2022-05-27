@@ -1,3 +1,5 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable indent */
 /* eslint-disable no-tabs */
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
@@ -10,6 +12,10 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import CreateFaerie from './components/Faeries/CreateFaerie'
+import UpdateFaerie from './components/Faeries/UpdateFaerie'
+import IndexFaeries from './components/Faeries/IndexFaeries'
+import ShowFaerie from './components/Faeries/ShowFaerie'
 
 class App extends Component {
   constructor (props) {
@@ -86,6 +92,34 @@ class App extends Component {
               <ChangePassword msgAlert={this.msgAlert} user={user} />
             )}
           />
+          <AuthenticatedRoute
+            user={user}
+            path='/create-faerie'
+            render={() => (
+              <CreateFaerie msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+            <AuthenticatedRoute
+            user={user}
+            path='/update-faerie'
+            render={() => (
+              <UpdateFaerie msgAlert={this.msgAlert} user={user} />
+            )}
+            />
+            <AuthenticatedRoute
+            user={user}
+            path='/index-faerie'
+            render={() => (
+              <IndexFaeries msgAlert={this.msgAlert} user={user} />
+            )}
+            />
+            <AuthenticatedRoute
+            user={user}
+            path='/show-faerie'
+            render={() => (
+              <ShowFaerie msgAlert={this.msgAlert} user={user} />
+            )}
+            />
         </main>
       </Fragment>
     )

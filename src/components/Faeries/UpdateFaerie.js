@@ -1,15 +1,18 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable indent */
+/* eslint-disable no-tabs */
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 // API request
 import { updateFaerie, showFaerie } from '../../api/faeries'
-import FaerieForm from '../Shared/MovieForm'
+import FaerieForm from '../Shared/FaerieForm'
 
 class UpdateFaerie extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      // using null as a starting value will help us manage the "loading state" of our UpdateMovie component
+      // using null as a starting value will help us manage the "loading state" of our Updatefaerie component
       faerie: { // this should not be null
         faeriename: '', // must provide starting values for the form inputs
         power: ''
@@ -22,7 +25,12 @@ class UpdateFaerie extends Component {
     const { match, user, msgAlert } = this.props
 
     showFaerie(match.params.id, user)
-      .then(res => this.setState({ faerie: res.data.faerie }))
+      .then((res) =>
+        this.setState({
+          faeriename: res.data.faerie.faeriename,
+          power: res.data.faerie.power
+    })
+  )
       .then(() => msgAlert({
         heading: 'Show faerie success',
         message: 'Check out the faerie',
@@ -35,16 +43,11 @@ class UpdateFaerie extends Component {
       }))
   }
 
-    handleChange = (event) => {
-      // because `this.state.faerie` is an object with multiple keys, we have to do some fancy updating
-      const userInput = { [event.target.name]: event.target.value }
-      this.setState(currState => {
-        // "Spread" out current faerie state key/value pairs, then add the new one at the end
-        // this will override the old key/value pair in the state but leave the others untouched
-        return { faerie: { ...currState.faerie, ...userInput } }
-      })
-    }
-
+	handleChange = (event) =>
+	  this.setState({
+	    [event.target.name]: event.target.value
+	  })
+    
     handleSubmit = (event) => {
       event.preventDefault()
 

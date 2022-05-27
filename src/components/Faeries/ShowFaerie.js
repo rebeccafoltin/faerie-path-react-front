@@ -1,8 +1,12 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable indent */
+/* eslint-disable no-tabs */
+
 import React, { Component } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 
 // API request
-import { showFaerie, deleteFaerie } from '../../api/movies'
+import { showFaerie, deleteFaerie } from '../../api/faeries'
 
 import Button from 'react-bootstrap/Button'
 
@@ -21,9 +25,8 @@ class ShowFaerie extends Component {
     const { match, user, msgAlert } = this.props
 
   // SHOW FAERIE
-  
     showFaerie(match.params.id, user)
-      .then(res => this.setState({ faerie: res.data.faerie }))
+      .then(res => this.setState({ faerie: res.data.faeries }))
       .then(() => msgAlert({
         heading: 'Show faerie success',
         message: 'Check out the faerie',
@@ -37,12 +40,11 @@ class ShowFaerie extends Component {
   }
 
   // DELETE FAERIE
-
     handleDelete = (event) => {
       const { match, user, msgAlert, history } = this.props
       deleteFaerie(match.params.id, user)
-      // Redirect to the list of movies
-        .then(() => history.push('/movies'))
+      // Redirect to the list of faeries
+        .then(() => history.push('/faeries'))
         .then(() => msgAlert({ heading: 'Delete faerie successfully', message: 'Faerie is no more', variant: 'success' }))
         .catch(err => msgAlert({ heading: 'Delete faerie failed :(', message: 'Something went wrong: ' + err.message, variant: 'danger' }))
     }

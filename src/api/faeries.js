@@ -1,16 +1,18 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable indent */
+/* eslint-disable no-tabs */
 // apiUrl will be either the production or development url defined
 // in the apiConfig.js file
 import apiUrl from '../apiConfig'
 import axios from 'axios'
-
 
 // Create Faerie Request
 // assume that `data` is an object with `title` and `director`
 // { title: 'something', director: 'someone' }
 export const createFaerie = (data, user) => {
   return axios({
-    url: apiUrl + '/faeries',
-    method: 'post',
+    url: apiUrl + '/create-faerie',
+    method: 'POST',
     data: { faerie: data },
     headers: {
       Authorization: `Bearer ${user.token}`
@@ -25,7 +27,7 @@ export const indexFaeries = (user) => {
     // method key sets the HTTP verb/method for this request
     // GET is the default method, so we can include or not up to us
     method: 'GET',
-    url: apiUrl + '/faeries',
+    url: apiUrl + '/index-faerie',
     headers: {
       Authorization: `Bearer ${user.token}`
     }
@@ -36,7 +38,7 @@ export const indexFaeries = (user) => {
 // GET /faeries/:id
 export const showFaerie = (id, user) => {
   return axios({
-    url: apiUrl + '/faeries/' + id,
+    url: apiUrl + '/show-faerie/' + id,
     // method is optional, default is GET
     headers: {
       Authorization: `Bearer ${user.token}`
@@ -48,7 +50,7 @@ export const showFaerie = (id, user) => {
 // DELETE /faeries/:id
 export const deleteFaerie = (id, user) => {
   return axios({
-    url: apiUrl + '/faeries/' + id,
+    url: apiUrl + '/delete-faerie/' + id,
     method: 'DELETE',
     headers: {
       Authorization: `Bearer ${user.token}`
@@ -59,12 +61,12 @@ export const deleteFaerie = (id, user) => {
 // Update Faerie Request
 // PATCH /faeries/:id
 export const updateFaerie = (data, id, user) => {
-    return axios({
-      url: apiUrl + '/faeries/' + id,
-      method: 'patch',
-      data: { faerie: data },
-      headers: {
-        Authorization: `Bearer ${user.token}`
-      }
-    })
-  }
+  return axios({
+    url: apiUrl + '/update-faerie/' + id,
+    method: 'patch',
+    data: { faerie: data },
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    }
+  })
+}

@@ -1,9 +1,12 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable indent */
+/* eslint-disable no-tabs */
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
 import FaerieForm from '../Shared/FaerieForm'
 
-import { createFaerie } from ''
+import { createFaerie } from '../../api/faeries'
 
 class CreateFaerie extends Component {
   constructor (props) {
@@ -27,7 +30,7 @@ class CreateFaerie extends Component {
       const { user, msgAlert, history } = this.props
 
       createFaerie(this.state, user)
-        .then(res => history.push('/faeries/' + res.data.faerie._id))
+        .then(res => history.push('/faerie/' + res.data.faerie._id))
         .then(() => msgAlert({ heading: 'Faerie Created!', message: 'Nice work, go check out your faerie.', variant: 'success' }))
         .catch(err => {
           msgAlert({
@@ -53,4 +56,3 @@ class CreateFaerie extends Component {
 }
 
 export default withRouter(CreateFaerie)
-
