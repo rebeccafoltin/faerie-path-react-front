@@ -32,28 +32,3 @@ const FaerieForm = ({ faerie, handleSubmit, handleChange }) => (
 )
 
 export default FaerieForm
-
-// const FaerieForm = ({ faerie, handleSubmit, handleChange, cancelPath}) => (
-//   <form onSubmit={handleSubmit}>
-//     <label> Faerie Name </label>
-//     <input placeholder="Tinkerbell"
-//     value={faerie.faeriename}
-//     name="faeriename"
-//     onChange={handleChange}
-//     />
-//     <label>Faerie Power</label>
-//     <input
-//       placeholder="Fire"
-//       value={faerie.power}
-//       name="power"
-//       onChange={handleChange}
-//     />
-
-//     <button type="submit">Submit</button>
-//     <Link to={cancelPath}>
-//       <button>Cancel</button>
-//     </Link>
-//   </form>
-// )
-
-// export default FaerieForms

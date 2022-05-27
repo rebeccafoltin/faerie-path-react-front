@@ -5,8 +5,9 @@ body {
     opacity: .8;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
-    background-color: hwb(195 20% 18%);
-    color: white;
+    background-color: #a4bbe3;
+    background: url('../src/Images/sprite.jpg') no-repeat center fixed;
+    color: rgb(39, 237, 204);
 }
 
 .navbar-brand {
@@ -17,20 +18,22 @@ body {
 .btn, .btn-primary {
     margin-top: 10px;
     margin-right: 10px;
-    // background-color: tomato !important;
-    // border-color: tomato;
-    box-shadow: 3px 5px rgb(235, 203, 203);
+    box-shadow: 3px 5px rgb(103, 28, 28);
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(23, 230, 213);
 }
 
 a:hover {
-    color: #155114;
+    color: #a4bbe3;
 }
 
 .container {
     margin-top: 20px;
+}
+
+.nav-link {
+    color: rgb(0, 0, 0);
 }

@@ -39,7 +39,7 @@ export const indexFaeries = (user) => {
 export const showFaerie = (id, user) => {
   return axios({
     url: apiUrl + '/show-faerie/' + id,
-    // method is optional, default is GET
+    method: 'GET',
     headers: {
       Authorization: `Bearer ${user.token}`
     }
@@ -63,8 +63,13 @@ export const deleteFaerie = (id, user) => {
 export const updateFaerie = (data, id, user) => {
   return axios({
     url: apiUrl + '/update-faerie/' + id,
-    method: 'patch',
-    data: { faerie: data },
+    method: 'PATCH',
+    data: {
+      faerie: {
+        faeriename: data?.faeriename,
+        power: data?.power
+      }
+    },
     headers: {
       Authorization: `Bearer ${user.token}`
     }

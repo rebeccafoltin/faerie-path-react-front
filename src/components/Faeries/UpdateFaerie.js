@@ -5,7 +5,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 // API request
 import { updateFaerie, showFaerie } from '../../api/faeries'
-import FaerieForm from '../Shared/FaerieForm'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 class UpdateFaerie extends Component {
   constructor (props) {
@@ -25,6 +26,7 @@ class UpdateFaerie extends Component {
     const { match, user, msgAlert } = this.props
 
     showFaerie(match.params.id, user)
+      .then(console.log(match.params.id))
       .then((res) =>
         this.setState({
           faeriename: res.data.faerie.faeriename,
@@ -43,18 +45,18 @@ class UpdateFaerie extends Component {
       }))
   }
 
-	handleChange = (event) =>
-	  this.setState({
-	    [event.target.name]: event.target.value
-	  })
-    
+	  handleChange = (event) =>
+	    this.setState({
+	      [event.target.name]: event.target.value
+	    })
+
     handleSubmit = (event) => {
       event.preventDefault()
 
       const { user, msgAlert, history, match } = this.props
 
-      updateFaerie(this.state.faerie, match.params.id, user)
-        .then(res => history.push('/faeries/' + match.params.id))
+      updateFaerie(this.state, match.params.id, user)
+        .then(res => history.push('/update-faerie/' + match.params.id))
         .then(() => msgAlert({ heading: 'Faerie Updated!', message: 'Nice work, go check out your faerie.', variant: 'success' }))
         .catch(err => {
           msgAlert({
@@ -69,13 +71,31 @@ class UpdateFaerie extends Component {
       return (
         <>
           <h3>Update Faerie Page</h3>
-          <FaerieForm
-            faerie={this.state.faerie}
-            handleSubmit={this.handleSubmit}
-            handleChange={this.handleChange}
-          />
-        </>
-      )
+            <Form onSubmit={this.handleSubmit}>
+              <Form.Group controlId='name'>
+                <Form.Label>Faerie Name</Form.Label>
+                  <Form.Control
+                    required
+                    name='faeriename'
+                    value={this.state.faeriename}
+                    placeholder='Faerie Name'
+                    onChange={this.handleChange}
+                  />
+              </Form.Group>
+              <Form.Group controlId='power'>
+                <Form.Label>Faerie Power</Form.Label>
+                  <Form.Control
+                    onChange={this.handleChange}
+                    required
+                    name='power'
+                    value={this.state.power}
+                    placeholder='Faerie Power'
+                  />
+              </Form.Group>
+              <Button type="submit">Submit</Button>
+            </Form>
+                  </>
+        )
     }
 }
 
