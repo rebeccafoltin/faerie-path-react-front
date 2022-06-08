@@ -42,13 +42,6 @@ Welcome to Faerie Path, a Database for Spiritual Denizens! Faeriepath is an app 
 | PATCH         | /profiles/`:id` | update profile       | update           |
 | DELETE        | /profiles/`:id` | delete profile       | destroy          |
 
-### _Score Routes_
-
-| HTTP Method   | URL Path        | Result               | Action           |
-|:--------------|:----------------|:---------------------|:-----------------|
-| GET           | /scores         | read list of scores  | index scores     |
-| POST          | /scores         | adds score to list   | adds score       |
-
 ## Technologies Used
 
 |    Libraries      | Languages        | Frameworks              | Database          | Version Control
