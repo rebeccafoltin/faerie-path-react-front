@@ -2,6 +2,7 @@
 
 # Description 
 A website where users can create their own faeries with unique faerie powers!
+Click here to explore: https://rebeccafoltin.github.io/faerie-path-react-front/
 
 ## Introduction
 Ever dreamed of making your own faeries? 
@@ -17,21 +18,18 @@ Welcome to Faerie Path, a Database for Spiritual Denizens! Faeriepath is an app 
 
 ## Project Planning 
 -
--
--
 
 ## User Stories
-1. Sign Up: If you're a first time user, sign up with your email and password.
-2. Sign In: If you're already registered, congrats! Click 'Sign In.' Change your password if needed.
-3. Creating a Profile: Create your own profile and make edits/delete if desired.
-4. Game: Enter the game and play!
-5. High Scores: View yours and others high scores.
-  
-- User will be able to sign up.
-- User will be able to sign in, sign out and change password.
-- User will create a profile and be able to edit/delete profile.
-- User will be able to play the game.
-- User will be able to view their high scores and others high scores.
+1. Sign Up: If you are new, welcome! Please sign up with your email and password.
+2. Sign In: If you have an account, click sign in. Change your password if needed.
+
+- User can sign up.
+- User can sign in, sign out, and change password.
+- User can create a faerie resource
+- User can read a faerie resource
+- User can index faerie resources
+- User can update a faerie resource
+- User can delete a faerie resource
 
 ## API Routes
 ### _Profile Routes_
@@ -59,23 +57,21 @@ Welcome to Faerie Path, a Database for Spiritual Denizens! Faeriepath is an app 
 |  [Axios](https://www.npmjs.com/package/axios)         | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)          |        |          |
 |    [Mongoose](https://mongoosejs.com/)        |           |        |         |
 |          |          |       |         |
+
 ### Entity Relationship Diagram
-![ERDbrick.png](ERDbrick.png)
+![express-api-faerie/Images/erd.png](express-api-faerie/Images/erd.png)
+https://photos.app.goo.gl/kfqDrzZewNQJpDJD8 
 
 ### Wireframe
-![wireframe.png](wireframe.png)
+![faerie-path-react-front/wireframe.png](faerie-path-react-front/wireframe.png)
 https://photos.app.goo.gl/PkeRm6bAVtC3w9aRA
 
 ### Opportunities for Future Iterations
 I plan on spending the summer Working towards making this a database to share my faerie knowledge with the world. I hope to create an interactive choose your own adventure game with the faeries users create
 
 ### [Link to Back End Repo](https://github.com/rebeccafoltin/express-api-faerie)
+#### [Link to Front End Repo](https://github.com/rebeccafoltin/faerie-path-react-front)
+
 ### Links to Deployed Sites:
 - [Link to the API Deployed](https://stormy-fortress-08010.herokuapp.com/)
 - [Link to the Client Deployed](https://rebeccafoltin.github.io/faerie-path-react-front/)
-Set Up Instructions
-Fork and clone this repository
-Change into directory
-Checkout to a new branch
-Run npm install in the command line
-Run npm start in the command line
