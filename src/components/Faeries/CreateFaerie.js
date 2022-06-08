@@ -3,10 +3,9 @@
 /* eslint-disable no-tabs */
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-
-import FaerieForm from '../Shared/FaerieForm'
-
 import { createFaerie } from '../../api/faeries'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 class CreateFaerie extends Component {
   constructor (props) {
@@ -25,6 +24,7 @@ class CreateFaerie extends Component {
     }
 
     handleSubmit = (event) => {
+      console.log('#########', this.state.faerie)
       event.preventDefault()
 
       const { user, msgAlert, history } = this.props
@@ -44,14 +44,32 @@ class CreateFaerie extends Component {
     render () {
       return (
         <>
-          <h3>Create Faerie</h3>
-          <FaerieForm
-            faerie={this.state}
-            handleSubmit={this.handleSubmit}
-            handleChange={this.handleChange}
-          />
-        </>
-      )
+          <h3>Create Faerie Page</h3>
+            <Form onSubmit={this.handleSubmit}>
+              <Form.Group controlId='name'>
+                <Form.Label>Faerie Name</Form.Label>
+                  <Form.Control
+                    required
+                    name='faeriename'
+                    value={this.state.faeriename}
+                    placeholder='Faerie Name'
+                    onChange={this.handleChange}
+                  />
+              </Form.Group>
+              <Form.Group controlId='power'>
+                <Form.Label>Faerie Power</Form.Label>
+                  <Form.Control
+                    onChange={this.handleChange}
+                    required
+                    name='power'
+                    value={this.state.power}
+                    placeholder='Faerie Power'
+                  />
+              </Form.Group>
+              <Button type="submit">Submit</Button>
+            </Form>
+                  </>
+        )
     }
 }
 

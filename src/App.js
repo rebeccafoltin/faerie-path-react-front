@@ -101,21 +101,21 @@ class App extends Component {
           />
             <AuthenticatedRoute
             user={user}
-            path='/update-faerie/:id'
+            path='/faerie/:id'
             render={() => (
               <UpdateFaerie msgAlert={this.msgAlert} user={user} />
             )}
             />
             <AuthenticatedRoute
             user={user}
-            path='/index-faerie'
+            path='/faeries'
             render={() => (
               <IndexFaeries msgAlert={this.msgAlert} user={user} />
             )}
             />
             <AuthenticatedRoute
             user={user}
-            path='/show-faerie/:id'
+            path='/faerie/:id'
             render={() => (
               <ShowFaerie msgAlert={this.msgAlert} user={user} />
             )}

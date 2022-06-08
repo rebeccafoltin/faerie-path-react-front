@@ -26,7 +26,6 @@ class UpdateFaerie extends Component {
     const { match, user, msgAlert } = this.props
 
     showFaerie(match.params.id, user)
-      .then(console.log(match.params.id))
       .then((res) =>
         this.setState({
           faeriename: res.data.faerie.faeriename,

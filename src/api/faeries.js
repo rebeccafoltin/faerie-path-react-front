@@ -13,7 +13,12 @@ export const createFaerie = (data, user) => {
   return axios({
     url: apiUrl + '/create-faerie',
     method: 'POST',
-    data: { faerie: data },
+    data: {
+      faerie: {
+        faeriename: data.faeriename,
+        power: data.power
+      }
+    },
     headers: {
       Authorization: `Bearer ${user.token}`
     }
@@ -27,7 +32,7 @@ export const indexFaeries = (user) => {
     // method key sets the HTTP verb/method for this request
     // GET is the default method, so we can include or not up to us
     method: 'GET',
-    url: apiUrl + '/index-faerie',
+    url: apiUrl + '/faeries',
     headers: {
       Authorization: `Bearer ${user.token}`
     }
@@ -38,7 +43,7 @@ export const indexFaeries = (user) => {
 // GET /faeries/:id
 export const showFaerie = (id, user) => {
   return axios({
-    url: apiUrl + '/show-faerie/' + id,
+    url: apiUrl + '/faerie/' + id,
     method: 'GET',
     headers: {
       Authorization: `Bearer ${user.token}`
@@ -50,7 +55,7 @@ export const showFaerie = (id, user) => {
 // DELETE /faeries/:id
 export const deleteFaerie = (id, user) => {
   return axios({
-    url: apiUrl + '/delete-faerie/' + id,
+    url: apiUrl + '/faerie/' + id,
     method: 'DELETE',
     headers: {
       Authorization: `Bearer ${user.token}`
@@ -62,7 +67,7 @@ export const deleteFaerie = (id, user) => {
 // PATCH /faeries/:id
 export const updateFaerie = (data, id, user) => {
   return axios({
-    url: apiUrl + '/update-faerie/' + id,
+    url: apiUrl + '/faerie/' + id,
     method: 'PATCH',
     data: {
       faerie: {

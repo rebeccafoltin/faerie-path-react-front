@@ -8,9 +8,7 @@ const authenticatedOptions = (
     <NavLink to='/change-password' className='nav-link'>Change Password</NavLink>
     <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>
     <NavLink to='/create-faerie' className='nav-link'>Create Faerie</NavLink>
-    <NavLink to='/index-faerie' className='nav-link'>Index Faerie</NavLink>
-    <NavLink to='/update-faerie' className='nav-link'>Update Faerie</NavLink>
-    <NavLink to='/show-faerie' className='nav-link'>Show Faeries</NavLink>
+    <NavLink to='/faeries' className='nav-link'>Index Faerie</NavLink>
   </Fragment>
 )
 
