@@ -11,7 +11,7 @@ import axios from 'axios'
 // { title: 'something', director: 'someone' }
 export const createFaerie = (data, user) => {
   return axios({
-    url: apiUrl + '/create-faerie',
+    url: apiUrl + '/create-faerie/',
     method: 'POST',
     data: {
       faerie: {
