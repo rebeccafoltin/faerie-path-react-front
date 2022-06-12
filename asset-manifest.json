@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/faerie-path-react-front/static/css/main.e91ee6c7.chunk.css",
-    "main.js": "/faerie-path-react-front/static/js/main.8aa3fb34.chunk.js",
-    "main.js.map": "/faerie-path-react-front/static/js/main.8aa3fb34.chunk.js.map",
+    "main.js": "/faerie-path-react-front/static/js/main.821c52d2.chunk.js",
+    "main.js.map": "/faerie-path-react-front/static/js/main.821c52d2.chunk.js.map",
     "runtime-main.js": "/faerie-path-react-front/static/js/runtime-main.b6a27349.js",
     "runtime-main.js.map": "/faerie-path-react-front/static/js/runtime-main.b6a27349.js.map",
     "static/js/2.d74472ab.chunk.js": "/faerie-path-react-front/static/js/2.d74472ab.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.b6a27349.js",
     "static/js/2.d74472ab.chunk.js",
     "static/css/main.e91ee6c7.chunk.css",
-    "static/js/main.8aa3fb34.chunk.js"
+    "static/js/main.821c52d2.chunk.js"
   ]
 }
