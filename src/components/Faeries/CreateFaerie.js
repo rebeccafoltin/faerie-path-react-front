@@ -27,15 +27,23 @@ class CreateFaerie extends Component {
       event.preventDefault()
 
       const { user, msgAlert, history } = this.props
+      let responseData
 
       createFaerie(this.state, user)
+      .then((res) => {
+	      msgAlert({
+	        heading: 'Faerie created',
+	        message: 'Faerie created!',
+	        variant: 'success'
+	      })
+	      return res
+	    })
         .then((res) => {
 	      return (responseData = res.data.profile._id)
 	    })
         .then(() => {
 	      history.push(`/faerie/${responseData}`)
 	    })
-        .then(() => msgAlert({ heading: 'Faerie Created!', message: 'Nice work, go check out your faerie.', variant: 'success' }))
         .catch(err => {
           msgAlert({
             heading: 'Faerie creation failed :(',
