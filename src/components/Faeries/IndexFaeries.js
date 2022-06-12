@@ -24,7 +24,7 @@ class IndexFaeries extends Component {
     const { user, msgAlert } = this.props
     indexFaeries(user)
       .then(res => this.setState({ faeries: res.data.faerie }))
-      .then(() => msgAlert({ heading: 'Index success', message: 'Here\'s the faeries', variant: 'success' }))
+      .then(() => msgAlert({ heading: 'Index Success', message: 'Wow, look at all those faeries!', variant: 'success' }))
       .catch(err => msgAlert({ heading: 'Index failed :(', message: 'Something went wrong: ' + err.message, variant: 'danger' }))
   }
 
@@ -36,7 +36,7 @@ class IndexFaeries extends Component {
 
     let faerieJsx
     if (faeries.length === 0) {
-      faerieJsx = 'No faeries, go create some'
+      faerieJsx = 'No faeries to see here! go create some'
     } else {
       faerieJsx = faeries.map(faerie => (
         <li key={faerie._id}>
@@ -47,7 +47,7 @@ class IndexFaeries extends Component {
 
     return (
       <>
-        <h3>All The Faeries:</h3>
+        <h3>All of the Faeries</h3>
         <ul>{faerieJsx}</ul>
       </>
     )

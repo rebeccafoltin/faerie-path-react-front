@@ -21,6 +21,7 @@ Welcome to Faerie Path, a Database for Spiritual Denizens! Faeriepath is an app 
 - Created Wireframes
 - Created ERD
 - Set up environment by downloading GA provided React Client and Express API templates
+
 ### API
 - Created resource end points
 - Tested resource's end points with curl scripts 
@@ -44,15 +45,15 @@ Welcome to Faerie Path, a Database for Spiritual Denizens! Faeriepath is an app 
 - User can delete a faerie resource
 
 ## API Routes
-### _Profile Routes_
+### _Faerie Routes_
 
 | HTTP Method   | URL Path        | Result               | Action           |
 |:--------------|:----------------|:---------------------|:-----------------|
-| GET           | /profiles       | read list of profiles| index or list    |
-| GET           | /profiles/`:id` | read single profile  | show or retrieve |
-| POST          | /profile        | create profile       | create           |
-| PATCH         | /profiles/`:id` | update profile       | update           |
-| DELETE        | /profiles/`:id` | delete profile       | destroy          |
+| GET           | /faeries       | read list of faeries| index or list    |
+| GET           | /faerie/`:id` | read single faerie  | show or retrieve |
+| POST          | /create-faerie        | create faerie       | create           |
+| PATCH         | /faerie/`:id` | update faerie       | update           |
+| DELETE        | /faerie/`:id` | delete faerie       | destroy          |
 
 ## Technologies Used
 
@@ -71,8 +72,9 @@ https://photos.app.goo.gl/kfqDrzZewNQJpDJD8
 ![wireframe.png](wireframe.png)
 https://photos.app.goo.gl/PkeRm6bAVtC3w9aRA
 
-### Opportunities for Future Iterations
-I plan on spending the summer Working towards making this a database to share my faerie knowledge with the world. I hope to create an interactive choose your own adventure game with the faeries users create
+### Future Goals
+-  I plan on adding more entities to faerie resources.
+- I plan on creating an interactive 'choose your own adventure' game and add it to the website.
 
 ### [Link to Back End Repo](https://github.com/rebeccafoltin/express-api-faerie)
 #### [Link to Front End Repo](https://github.com/rebeccafoltin/faerie-path-react-front)

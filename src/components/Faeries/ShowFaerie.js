@@ -86,15 +86,10 @@ class ShowFaerie extends Component {
 	              <>
 	                <Button
 	                  variant='outline-dark'
-	                  onClick={this.handleDelete}>
-										Delete
-	                </Button>
-	                <Button
-	                  variant='outline-dark'
 	                  onClick={() =>
 	                    history.push(`/update-faerie/${match.params.id}`)
 	                  }>
-										Update
+										Delete
 	                </Button>
 	              </>
 	            )}
