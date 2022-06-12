@@ -66,7 +66,7 @@ class ShowFaerie extends Component {
 	  }
 
 	  const { faeriename, power, owner } = this.state.faerie
-	  const { user, history, match } = this.props
+	  const { user } = this.props
 
 	  return (
 	    <div>
