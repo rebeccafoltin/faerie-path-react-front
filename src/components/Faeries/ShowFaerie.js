@@ -43,7 +43,7 @@ class ShowFaerie extends Component {
 	  const { match, user, msgAlert, history } = this.props
 
 	  deleteFaerie(match.params.id, user)
-	    .then(() => history.push('/faeries'))
+	    .then(() => history.push('/create-faerie'))
 	    .then(() => {
 	      msgAlert({
 	        heading: 'Delete success',

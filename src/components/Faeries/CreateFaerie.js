@@ -24,13 +24,17 @@ class CreateFaerie extends Component {
     }
 
     handleSubmit = (event) => {
-      console.log('#########', this.state.faerie)
       event.preventDefault()
 
       const { user, msgAlert, history } = this.props
 
       createFaerie(this.state, user)
-        .then(res => history.push('/faerie/' + res.data.faerie._id))
+        .then((res) => {
+	      return (responseData = res.data.profile._id)
+	    })
+        .then(() => {
+	      history.push(`/faerie/${responseData}`)
+	    })
         .then(() => msgAlert({ heading: 'Faerie Created!', message: 'Nice work, go check out your faerie.', variant: 'success' }))
         .catch(err => {
           msgAlert({
